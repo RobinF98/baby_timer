@@ -17,11 +17,11 @@
         {{ form.username.errors | safe }}
         <div class="form-floating">
             {% render_field form.login placeholder="Username" id="username" name="username" type="text" autocomplete="username" required="True" class="form-control" %}
-            <label for="floatingInput">Username</label>
+            <label for="username">Username</label>
         </div>
         {{ form.password.errors | safe }}   
         <div class="form-floating">
-            {% render_field form.password id="password" placeholder="Password" type="password" required="True" class="form-control" %}
+            {% render_field form.password id="password" placeholder="Password" type="password" required="True" class="form-control" aria-describedby="password" %}
             <label for="password">Password</label>
         </div>
 
