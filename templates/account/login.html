@@ -14,9 +14,10 @@
             <a class="link-primary link-underline link-underline-opacity-0" href="{{ signup_url }}">Sign up</a>.
         </p>
         {{ form.non_field_errors | safe }}
-        {{ form.username.errors | safe }}
+        {{ form.login.errors | safe }}
+        <!--The below text input (id=username) has no "name" attribute as this is added by Django during the render operation. The two name attributes were causing validation issues -->
         <div class="form-floating">
-            {% render_field form.login placeholder="Username" id="username" name="username" type="text" autocomplete="username" required="True" class="form-control" %}
+            {% render_field form.login placeholder="Username" id="username" type="text" autocomplete="username" required="True" class="form-control" %}
             <label for="username">Username</label>
         </div>
         {{ form.password.errors | safe }}   
