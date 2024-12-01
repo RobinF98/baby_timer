@@ -104,6 +104,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
   
   - In testing the HTML and CSS on the main site pages, the only issues were the bootstrap custom classes.
   - The custom python code used in this project is PEP8 compliant.
+  - One issue that was tricky to solve was the validator picking up on form elements with multiple name attributes, or aria-describedby attributes that referenced a non-existent element. This was caused by Django adding in these attributes when rendering [BoundFields]("https://docs.djangoproject.com/en/5.1/ref/forms/api/#django.forms.BoundField")
 
 ## DEPLOYMENT
 
