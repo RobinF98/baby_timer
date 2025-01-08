@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/************* LOGS *************/
+.btn-edit-logs {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.logs-list {
+    padding: 12px;
+}
+
+/****** BOOTSTRAP LOGIN FORM ******/
+.form-signin {
+    max-width: 500px;
+    padding: 1rem;
+    margin-top: 7rem;
+    margin: 3rem;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+} */
+
+#password2, #password {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#password1 {
+    border-radius: 0;
+}
+
+.errorlist {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: none;
+    color: #ea868f;
+    border: solid 1px #842029;
+    border-radius: 6px;
+    background-color: #2c0b0e;
+}
