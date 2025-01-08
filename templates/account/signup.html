@@ -15,9 +15,7 @@
         <p>
             Already have an account? <a class="link-primary link-underline link-underline-opacity-0" href="{{ login_url }}">Sign in</a>.
         </p>
-        <div class="invalid-feedback">
             {{ form.username.errors | safe }}
-        </div>
         <div class="form-floating">
                 {% render_field form.username placeholder="Username" id="username" name="username" type="text" autocomplete="username" required="True" class="form-control" %}
             <label for="username">Username</label>
@@ -27,12 +25,16 @@
             {% render_field form.password1 id="password1" placeholder="Password" type="password" required="True" class="form-control" %}
             <label for="password1">Password</label>
         </div>
-        <div class="invalid-feedback">
             {{ form.password2.errors | safe }}
-        </div>
         <div class="form-floating">
             {% render_field form.password2 id="password2" placeholder="Confirm password" type="password" required="True" class="form-control" %}
             <label for="password2">Confirm Password</label>
+        </div>
+        {% comment %}
+           Below is form.errors 
+        {% endcomment %}
+        <div class="invalid-feedback">
+        {{ form.errors | safe }}
         </div>
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
