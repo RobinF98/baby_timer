@@ -92,6 +92,7 @@ class BabyUpdateView(UserAccessMixin, generic.edit.UpdateView):
         "baby_name",
         "birthday",
         "due_date",
+        "notes",
     ]
 
     # 3rd party widgets for date/time selection
@@ -110,6 +111,7 @@ class BabyUpdateView(UserAccessMixin, generic.edit.UpdateView):
         initial["baby_name"] = baby_object.baby_name
         initial["birthday"] = baby_object.birthday
         initial["due_date"] = baby_object.due_date
+        initial["notes"] = baby_object.notes
         return initial
 
     def get_context_data(self, **kwargs):
