@@ -84,10 +84,74 @@ Easily edit and delete log entries, and with it's responsive design you can take
 - The site was tested for responsiveness on the Firefox and Chrome browsers, using the developer tools that come with the browsers.
 - As the site is styled almost exclusively bootstrap, the responsiveness is very good by default.
 - Of primary importance is how the site operates on the backend.
-  - Extensive manual testing was conducted to ensure teh site behaved as intended, with no strange redirects or buttons doing anything other than what they say they will do.
+  - Extensive manual testing was conducted to ensure the site behaved as intended, with no strange redirects or buttons doing anything other than what they say they will do.
   - Users can add/edit/delete babies/diapers/sleep entries.
   - Users can view all entries registered to a particular baby.
   - Users are redirected if they attempt to access another user's baby or baby's logs via the url.
+
+### Normal (Happy) Flow Manual Testing
+
+  | Feature | Action | Expected result | Actual result |
+  | --- | --- | --- | --- |
+  | Sign in page | Enter correct credentials and click Sign In | User is logged in and redirected to home page | Works as expected |
+  | Sign in page | Enter incorrect credentials | Wrong password/username error appears | Works as expected |
+  | Sign in page | Click Sign Up | User is redirected to Sign Up page | Works as expected |
+  | Sign Up page | Username, password1, and password 2 entered according to requirements | New User is created, logged in, and redirected to home page | Works as expected |
+  | Sign Up page | Passwords not entered identically / fewer than 8 characters | Password mismatch / too short error(s) appear | Works as expected |
+  | Sign Up page | Username entered with invalid characters | Invalid username error appears | Works as expected |
+  | Sign Up page | Click Sign In | User redirected to Sign In page | Works as expected |
+  | Home page - nav bar | Click BabyTimer | User redirected to Home Page | Works as expected |
+  | Home page - nav bar | Click Logs dropdown | Dropdown listing all babies and Add a new baby button is displayed | Works as expected |
+  | Home page - nav bar | Click on baby name in Logs dropdown | User is redirected to logs page for the specific baby | Works as expected |
+  | Home page - nav bar | Click Logout | Logout confirmation modal appears | Works as expected |
+  | Home page - logout confirmation modal | Click Cancel | Logout confirmation modal disappears | Works as expected |
+  | Home page - logout confirmation modal | Click Logout | User is logged out and redirected to Sign In page | Works as expected |
+  | Home page - body | Click Add new baby | User is redirected to add baby page | Works as expected |
+  | Home page - body | Click on Baby name in baby listing | User is redirected to baby detail page | Works as expected |
+  | Home page - body | Click on logs in baby listing | User is redirected logs page for the specific baby | Works as expected |
+  | Home page - body | Click on edit in baby listing | User is redirected edit page for the specific baby | Works as expected |
+  | Baby detail page | Click on Edit | User is redirected edit page for the specific baby | Works as expected |
+  | Baby detail page | Click on Delete | Delete baby confirmation modal appears | Works as expected |
+  | Baby detail page - delete confirmation modal | Click on Delete | Baby is deleted and user is directed to home page | Works as expected |
+  | Baby detail page - delete confirmation modal | Click on Cancel | Delete baby confirmation modal disappears | Works as expected |
+  | Add baby page | Baby details entered and click save | New baby entry added and user redirected to home page | Works as expected |
+  | Add baby page | Click cancel | No baby entry created and user redirected to home page | Works as expected |
+  | Date/Time form entry | Click in date\time entry field | Custom Date\Time widget appears | Works as expected |
+  | Custom Date/Time widget  - date view | Click date on calendar | Date is selected for form entry | Works as expected |
+  | Custom Date/Time widget - date view | Click clock icon below calendar | Time selection view is displayed | Works as expected |
+  | Custom Date/Time widget - time view | Click calendar icon above time selection | Date selection view is displayed | Works as expected |
+  | Custom Date/Time widget - time view | Adjust time using up/down arrow icons | Time entry is adjusted accordingly | Works as expected |
+  | Baby edit page | Initial form values | Form values correspond with saved baby fields | Works as expected |
+  | Baby edit page | Edit form field values, click save | Baby is updated with new field data | Works as expected |
+  | Baby edit page | Click cancel | Baby is not updated, user redirected to home baby logs view | Works as expected |
+  | Baby edit page | Click delete | Delete baby confirmation modal appears | Works as expected |
+  | Baby logs page | Click Add Diaper | User is redirected to Add Diaper page | Works as expected |
+  | Baby logs page | Click Add Sleep | User is redirected to Add Sleep page | Works as expected |
+  | Add Diaper page | Click type dropdown | Diaper Type Dropdown appears | Works as expected |
+  | Add Diaper page | Click cancel | User is redirected to Baby logs page | Works as expected |
+  | Add Diaper page | Click save | Diaper entry is created, User is redirected to Baby logs page | Works as expected |
+  | Baby logs page | Click on Diaper entry | User is redirected to Edit Diaper page | Works as expected |
+  | Diaper edit page | Click Save | Diaper entry is updated with Edit form values | Works as expected |
+  | Diaper edit page | Click Delete | Delete Diaper confirmation modal appears | Works as expected |
+  | Delete Diaper confirmation modal | Click Delete | Diaper is deleted and user is redirected to Baby logs page | Works as expected |
+  | Delete Diaper confirmation modal | Click Cancel | Delete Diaper confirmation modal disappears | Works as expected |
+  | Diaper Edit page | Click Cancel | User is redirected to Baby logs page | Works as expected |
+  | Baby logs page | Click on Sleep entry | User is redirected to Edit Sleep page | Works as expected |
+  | Add Sleep page | Click cancel | User is redirected to Baby logs page | Works as expected |
+  | Add Sleep page | Click save | Sleep entry is created, User is redirected to Baby logs page | Works as expected |
+  | Baby logs page | Click on Sleep entry | User is redirected to Edit Sleep page | Works as expected |
+  | Sleep edit page | Click Save | Sleep entry is updated with Edit form values | Works as expected |
+  | Sleep edit page | Click Delete | Delete Sleep confirmation modal appears | Works as expected |
+  | Delete Sleep confirmation modal | Click Delete | Sleep is deleted and user is redirected to Baby logs page | Works as expected |
+  | Delete Sleep confirmation modal | Click Cancel | Delete Sleep confirmation modal disappears | Works as expected |
+  | Sleep Edit page | Click Cancel | User is redirected to Baby logs page | Works as expected |
+  | Baby logs page | Click Baby name | User is rediredcted to Baby detail page | Works as expected |
+
+### Bad/Exception Flow Manual Testing
+  
+  | Feature | Action | Expected result | Actual result |
+  | --- | --- | --- | --- |
+  Unauthorised access protection | User tries to access entry/model instance where they are not the owner | User is redirected to 404 custom page | Works as expected |
 
 - ### BUGS
   
