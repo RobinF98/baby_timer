@@ -94,7 +94,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
   - Users can view all entries registered to a particular baby.
   - Users are redirected if they attempt to access another user's baby or baby's logs via the url.
 
-### Normal (Happy) Flow Manual Testing
+- ### Normal (Happy) Flow Manual Testing
 
   | Feature | Action | Expected result | Actual result |
   | --- | --- | --- | --- |
@@ -152,7 +152,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
   | Sleep Edit page | Click Cancel | User is redirected to Baby logs page | Works as expected |
   | Baby logs page | Click Baby name | User is rediredcted to Baby detail page | Works as expected |
 
-### Bad/Exception Flow Manual Testing
+- ### Bad/Exception Flow Manual Testing
   
   | Feature | Action | Expected result | Actual result |
   | --- | --- | --- | --- |
@@ -171,7 +171,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
 
 - ### VALIDATOR TESTING
   
-  - HTML validation screenshots can be seen [here](documentation.login_validation.png) and [here](documentation.home_validation.png)
+  - HTML validation screenshots can be seen [here](documentation/login_validation.png) and [here](documentation/home_validation.png)
   - The custom python code used in this project is PEP8 compliant.
   - One issue that was tricky to solve was the validator picking up on form elements with multiple name attributes, or aria-describedby attributes that referenced a non-existent element. This was caused by Django adding in these attributes when rendering [BoundFields]("https://docs.djangoproject.com/en/5.1/ref/forms/api/#django.forms.BoundField")
 
