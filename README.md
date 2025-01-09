@@ -61,6 +61,11 @@ Easily edit and delete log entries, and with it's responsive design you can take
   - Users are also unable to view the logs of a baby registered to another user.
   - If this is attempted by modifying the url, the user is redirected to the home page.
 
+- ### Error pages
+
+  - The site features custom error 404 and 500 pages.
+  - Both pages have links to take the user back to the home page.
+
 ## Future Features
 
 ---
@@ -166,7 +171,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
 
 - ### VALIDATOR TESTING
   
-  - In testing the HTML and CSS on the main site pages, the only issues were the bootstrap custom classes.
+  - HTML validation screenshots can be seen [here](documentation.login_validation.png) and [here](documentation.home_validation.png)
   - The custom python code used in this project is PEP8 compliant.
   - One issue that was tricky to solve was the validator picking up on form elements with multiple name attributes, or aria-describedby attributes that referenced a non-existent element. This was caused by Django adding in these attributes when rendering [BoundFields]("https://docs.djangoproject.com/en/5.1/ref/forms/api/#django.forms.BoundField")
 
@@ -216,6 +221,10 @@ This project made good use of the following:
  - Django Bootstrap Datepicker Plus (for the Date/timepickers)
  - Django Widget tweaks (Used extensively in customising the Login / Signup forms
  - Bootstrap Framework (For a tried and tested clean style on the entire project)
+
+ ## WIREFRAMES
+
+  - Basic mockups of the site's main pages can be found [here](documentation/wireframes.png)
 
 ## CREDITS
 
