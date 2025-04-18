@@ -14,12 +14,13 @@ class Baby(models.Model):
     birthday = models.DateField(("birthday"), blank=False,)
     due_date = models.DateField("predicted due date", blank=False,)
     notes = models.TextField(blank=True,)
-    
+
 
     def __str__(self):
         return self.baby_name
 
     class Meta:
+        verbose_name_plural = 'Babies'
         ordering = ["baby_name"]
         permissions = [
             ("can_view", "Can view baby details")
