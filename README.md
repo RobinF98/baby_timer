@@ -185,7 +185,7 @@ Easily edit and delete log entries, and with it's responsive design you can take
   - Set which branch you wish to deploy from (typically "main" or "master")
   - Navigate to the settings tab
   - Add your required config vars:
-    -  DATABASE_URL (From ElephantSQL)
+    -  DATABASE_URL [Code Institute](https://dbs.ci-dbs.net/)
     -  DEBUG (Set to True while in production, then False once shipped)
     -  DISABLE_COLLECTSTATIC (Set to 1 while in production, then 0 once shipped)
     -  SECRET-KEY (Your Django secret key - Keep it a secret! New keys can be generated on sites like [Djecrety](https://djecrety.ir/)
